@@ -96,8 +96,8 @@ app.post('/submit-form', upload.fields([
   { name: 'video' }
 ]), async (req, res) => {
   try {
-    console.log('Received files:', req.files);  // Debugging line
-    console.log('Received body:', req.body);
+    // console.log('Received files:', req.files);  // Debugging line
+    // console.log('Received body:', req.body);
 
     if (!req.files || (!req.files.photo && !req.files.video)) {
       return res.status(400).json({ message: 'At least one photo or video is required' });

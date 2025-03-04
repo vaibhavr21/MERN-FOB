@@ -598,6 +598,10 @@ footer {
       padding: 1rem;
   }
 
+  .nav-img {
+    display: none;
+}
+
   .o-reverse {
       flex-direction: column-reverse !important;
   }

@@ -66,7 +66,7 @@ const Report = forwardRef((props, ref) => {
     });
 
     try {
-      const response = await axios.post("http://localhost:3000/submit-form", formData, {
+      const response = await axios.post("https://mern-fob.onrender.com/submit-form", formData, {
         headers: { "Content-Type": "multipart/form-data" },
         onUploadProgress: (progressEvent) => {
           const percentCompleted = Math.round(

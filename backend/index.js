@@ -92,8 +92,8 @@ const uploadToCloudinary = (fileBuffer, resourceType) => {
 
 // POST route to handle form submission
 app.post('/submit-form', upload.fields([
-  { name: 'photo', maxCount: 10 },  // Match the field name from HTML
-  { name: 'video', maxCount: 10 }
+  { name: 'photo' }, 
+  { name: 'video' }
 ]), async (req, res) => {
   try {
     console.log('Received files:', req.files);  // Debugging line

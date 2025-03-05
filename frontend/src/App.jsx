@@ -5,11 +5,17 @@ import Navbar from "./components/Navbar";
 import SuccessStory from "./components/SuccessStory";
 import Footer from "./components/Footer";
 import Report from "./components/Report";
+import Preloader from "./components/Preloader.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [loading, setLoading] = useState(true);
   const reportRef = useRef(null);
   const location = useLocation();
+
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000); // Simulate loading time
+  }, []);
 
   useEffect(() => {
     if (location.pathname === '/report') {
@@ -20,6 +26,10 @@ function App() {
   const scrollToReport = () => {
     reportRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  if (loading) {
+    return <Preloader />; 
+  }
 
   return (
     <>

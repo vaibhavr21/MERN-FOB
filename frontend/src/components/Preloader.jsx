@@ -31,7 +31,7 @@ const WordRevealAnimation = () => {
   };
 
   return (
-    <div className="container">
+    <div className="text-reveal-container">
       <div className="text-container">
         {words.map((word, index) => (
           <span

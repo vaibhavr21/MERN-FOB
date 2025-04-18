@@ -30,7 +30,7 @@ const Navbar = () => {
       <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
         <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
         <li><Link to="/report" onClick={handleReportClick}>Report Issue</Link></li>
-        <li><Link to="/suggestions" onClick={() => setIsMenuOpen(false)}>Suggestions</Link></li>
+{/*         <li><Link to="/suggestions" onClick={() => setIsMenuOpen(false)}>Suggestions</Link></li> */}
       </ul>
       <button 
         className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}
